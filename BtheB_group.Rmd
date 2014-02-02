@@ -3,12 +3,13 @@ Group ? BtheB Homework Assignment
 
 ```{r}
 library(HSAUR2)
+library(ggplot2)
 summary(BtheB)
 ```
 
 You can also embed plots, for example:
 
 ```{r fig.width=7, fig.height=6}
-
+qplot(bdi.pre, bdi.5m, data=BtheB, geom=c("point", "smooth")) + facet_grid(.~treatment)
 ```
 
